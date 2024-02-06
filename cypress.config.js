@@ -1,9 +1,10 @@
-const { defineConfig } = require("cypress");
+/* eslint-disable linebreak-style */
+import { defineConfig } from 'cypress'
 
-module.exports = defineConfig({
+export default defineConfig({
   e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
+    setupNodeEvents() {
     },
+    baseUrl: 'http://localhost:5000',
   },
-});
+})
