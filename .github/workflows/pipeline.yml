@@ -40,9 +40,9 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v3
-      with:
-        fetch-depth: '0'
+      - uses: actions/checkout@v4
+        with:
+          node-version: '20'
       - name: Bump version and push tag
         if: ${{ github.event_name == 'push' && !contains(join(github.event.commits.*.message, ' '), '#skip') }}
         uses: anothrNick/github-tag-action@1.64.0
